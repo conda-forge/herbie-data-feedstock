@@ -11,7 +11,7 @@ Summary: Download numerical weather prediction GRIB2 model data.
 
 Development: https://github.com/blaylockbk/Herbie
 
-Documentation: https://blaylockbk.github.io/Herbie/_build/html/
+Documentation: https://herbie.readthedocs.io/
 
 Herbie is a python package that downloads recent and archived numerical weather
 prediction (NWP) model output from different cloud archive sources. Its most

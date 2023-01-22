@@ -10,7 +10,7 @@ source:
   sha256: ad6a1671ca68a31e9decd29a76e566474287fb47f1fcb406b46065edbadc9bee
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
@@ -55,7 +55,7 @@ about:
     can be read with xarray+cfgrib. Much of this data is made available through the
     NOAA Open Data Dissemination (NODD) Program (formerly the Big Data Program)
     which has made weather data more accessible than ever before.
-  doc_url: https://blaylockbk.github.io/Herbie/_build/html/
+  doc_url: https://herbie.readthedocs.io/
   dev_url: https://github.com/blaylockbk/Herbie
 
 extra:
