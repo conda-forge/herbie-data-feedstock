@@ -1,11 +1,14 @@
 {% set name = "herbie-data" %}
-{% set version = "2022.3.0" %}
+{% set version = "2023.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
+       https://files.pythonhosted.org/packages/d7/57/887184fe2cf9fa9558aacdbefc511f510ff8e2d08b23479a8d93b95228e8/herbie-data-2023.3.0.tar.gz
+       https://dev.azure.com/conda-forge/feedstock-builds/_build/results?buildId=671526&view=logs&j=656edd35-690f-5c53-9ba3-09c10d0bea97&t=e5c8ab1d-8ff9-5cae-b332-e15ae582ed2d&l=123
+       https://pypi.io/packages/source/h/herbie-data/herbie-data-2022.3.0.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 9415c79e72f48cb816513b987a860d1ff7733292bde4f7b31cdab0e577f1588c
 
