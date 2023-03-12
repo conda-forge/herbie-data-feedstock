@@ -1,11 +1,11 @@
-About herbie-data
-=================
+About herbie-data-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/herbie-data-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/blaylockbk/Herbie
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/herbie-data-feedstock/blob/main/LICENSE.txt)
 
 Summary: Download numerical weather prediction GRIB2 model data.
 
