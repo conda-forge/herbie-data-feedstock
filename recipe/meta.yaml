@@ -10,7 +10,7 @@ source:
   sha256: 9415c79e72f48cb816513b987a860d1ff7733292bde4f7b31cdab0e577f1588c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
@@ -25,6 +25,7 @@ requirements:
 
   run:
     - cfgrib >=0.9.10.1
+    - curl
     - metpy
     - numpy
     - pandas
