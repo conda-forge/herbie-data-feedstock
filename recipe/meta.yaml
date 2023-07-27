@@ -11,6 +11,7 @@ source:
 
 build:
   number: 2
+  noarch: generic 
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
       - PYTHONIOENCODING=utf8
