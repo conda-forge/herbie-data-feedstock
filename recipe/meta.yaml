@@ -32,7 +32,7 @@ requirements:
     - python >=3.8
     - pygrib
     - toml
-    - wgrib2 # [linux]
+    - wgrib2  # [linux]
     - xarray
 
 test:
