@@ -1,5 +1,5 @@
 {% set name = "herbie-data" %}
-{% set version = "2023.3.0" %}
+{% set version = "2023.12.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9415c79e72f48cb816513b987a860d1ff7733292bde4f7b31cdab0e577f1588c
+  sha256: 044cf6490db57e9db37750515d5b7e45f7a5ecf89d4c7e33ef02c303b5d4bb49
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.9
     - setuptools
     - setuptools_scm
 
@@ -29,9 +29,10 @@ requirements:
     - metpy
     - numpy
     - pandas
-    - python >=3.8
+    - python >=3.9
     - pygrib
     - toml
+    #- wgrib2  # [linux]
     - xarray
 
 test:
