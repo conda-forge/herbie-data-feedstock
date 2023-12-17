@@ -1,5 +1,5 @@
 {% set name = "herbie-data" %}
-{% set version = "2023.12.1" %}
+{% set version = "2023.12.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 044cf6490db57e9db37750515d5b7e45f7a5ecf89d4c7e33ef02c303b5d4bb49
+  sha256: 3651f9e55d51a51432534db0a306d5dddb98c98d2b186b310b2a3d04ee4118b4
 
 build:
   number: 0
