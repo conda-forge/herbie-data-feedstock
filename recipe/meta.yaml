@@ -24,13 +24,18 @@ requirements:
     - setuptools_scm
 
   run:
+    - cartopy
     - cfgrib >=0.9.10.1
     - curl
+    - matplotlib
     - metpy
     - numpy
     - pandas
     - python >=3.9
     - pygrib
+    - pyproj
+    - requests
+    - scikit-learn
     - toml
     #- wgrib2  # [linux]
     - xarray
