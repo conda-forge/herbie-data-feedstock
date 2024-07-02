@@ -27,13 +27,13 @@ requirements:
     - cartopy
     - cfgrib >=0.9.10.1
     - curl
-    - matplotlib
+    - matplotlib-base >=3.5.0
     - metpy
-    - numpy
+    - numpy <2
     - pandas
-    - python >=3.9
     - pygrib
     - pyproj
+    - python >=3.9
     - requests
     - scikit-learn
     - toml
