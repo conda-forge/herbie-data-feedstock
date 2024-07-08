@@ -29,7 +29,7 @@ requirements:
     - curl
     - matplotlib-base >=3.5.0
     - metpy
-    - numpy <2
+    - numpy
     - pandas
     - pygrib
     - pyproj
