@@ -21,8 +21,8 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools
-    - setuptools_scm
+    - hatchling
+    - hatch-vcs
 
   run:
     - cartopy
@@ -34,7 +34,7 @@ requirements:
     - pandas >=2.1
     - pyproj >=3.7
     - python >={{ python_min }}
-    - requests
+    - requests >=2.23.2
     - scikit-learn
     - toml
     #- wgrib2  # [linux]
