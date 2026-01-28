@@ -35,6 +35,7 @@ requirements:
     - pandas >=2.2.3
     - pyproj >=3.7
     - python >={{ python_min }}
+    - python-eccodes
     - requests >=2.23.3
     - scikit-learn >=1.8.0
     #- wgrib2  # [linux]
