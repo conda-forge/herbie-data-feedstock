@@ -29,7 +29,6 @@ requirements:
     - cfgrib >=0.9.15
     - curl
     - eccodes >=2.45.0
-    - eccodeslib >=2.44.1.8
     - matplotlib-base >=3.10.0
     - metpy >=1.7.1
     - numpy >=1.26.4
