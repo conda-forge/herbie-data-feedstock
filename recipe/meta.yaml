@@ -1,6 +1,6 @@
 {% set name = "herbie-data" %}
 {% set version = "2026.1.0" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -30,11 +30,11 @@ requirements:
     - curl
     - matplotlib-base >=3.8.0
     - metpy
-    - numpy >=1.24
-    - pandas >=2.1
+    - numpy >=1.26.4
+    - pandas >=2.2.3
     - pyproj >=3.7
     - python >={{ python_min }}
-    - requests >=2.23.2
+    - requests >=2.23.3
     - scikit-learn
     - toml
     #- wgrib2  # [linux]
