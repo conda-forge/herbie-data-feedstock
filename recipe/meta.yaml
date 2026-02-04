@@ -23,19 +23,19 @@ requirements:
     - python {{ python_min }}
     - hatchling
     - hatch-vcs
+    - eccodeslib  # [not win]
 
   run:
     - cartopy >=0.25.0
     - cfgrib >=0.9.15.1
     - curl
-    #- eccodes >=2.45.0
+    - eccodes >=2.45.0
     - matplotlib-base >=3.10.0
     - metpy >=1.7.1
     - numpy >=1.26.4
     - pandas >=2.2.3
     - pyproj >=3.7
     - python >={{ python_min }}
-    #- python-eccodes
     - requests >=2.23.3
     - scikit-learn >=1.8.0
     #- wgrib2  # [linux]
