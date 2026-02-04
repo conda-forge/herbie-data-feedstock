@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   script_env:
     - PYTHONIOENCODING=utf8
 
@@ -23,7 +23,6 @@ requirements:
     - python {{ python_min }}
     - hatchling
     - hatch-vcs
-    - eccodeslib  # [not win]
 
   run:
     - cartopy >=0.25.0
