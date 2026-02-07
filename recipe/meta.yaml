@@ -1,6 +1,6 @@
 {% set name = "herbie-data" %}
 {% set version = "2026.1.1" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps
   script_env:
     - PYTHONIOENCODING=utf8
 
@@ -25,24 +25,28 @@ requirements:
     - hatch-vcs
 
   run:
-    - cartopy
-    - cfgrib >=0.9.15
+    - cartopy >=0.25.0
+    - cfgrib >=0.9.15.1
     - curl
-    - matplotlib-base >=3.8.0
-    - metpy
-    - numpy >=1.24
-    - pandas >=2.1
+    - eccodes >=2.45.0
+    - matplotlib-base >=3.10.0
+    - metpy >=1.7.1
+    - numpy >=1.26.4
+    - pandas >=2.2.3
     - pyproj >=3.7
     - python >={{ python_min }}
-    - requests >=2.23.2
-    - scikit-learn
-    - toml
+    - requests >=2.23.3
+    - scikit-learn >=1.8.0
     #- wgrib2  # [linux]
     - xarray >=2025.1.1
 
 test:
+  source_files:
+    - tests/
+    - pyproject.toml 
   commands:
-    - pip check
+    - pytest -v tests/test_hrrr.py
+    #- pip check # diable since eccodeslibs requirement isn't on conda-forge
   imports:
     - herbie
     - herbie.models
