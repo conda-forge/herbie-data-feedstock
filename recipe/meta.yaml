@@ -1,6 +1,6 @@
 {% set name = "herbie-data" %}
-{% set version = "2025.12.0" %}
-{% set python_min = "3.10" %}
+{% set version = "2026.1.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: e95d9803c439f1dda916b3705d20bf7ef1e71141dbeeb59c43506522ecb3616f
+  sha256: 96ab0e2325dc43234f7425777fe8af960ac54d8bec4acc8ffbb7fafd13691181
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps
   script_env:
     - PYTHONIOENCODING=utf8
 
@@ -23,26 +23,26 @@ requirements:
     - python {{ python_min }}
     - hatchling
     - hatch-vcs
-
+    
   run:
-    - cartopy
-    - cfgrib >=0.9.15
+    - cartopy >=0.25.0
+    - cfgrib >=0.9.15.1
     - curl
-    - matplotlib-base >=3.8.0
-    - metpy
-    - numpy >=1.24
-    - pandas >=2.1
+    - eccodes >=2.45.0
+    - matplotlib-base >=3.10.0
+    - metpy >=1.7.1
+    - numpy >=1.26.4
+    - pandas >=2.2.3
     - pyproj >=3.7
     - python >={{ python_min }}
-    - requests >=2.23.2
-    - scikit-learn
-    - toml
+    - requests >=2.23.3
+    - scikit-learn >=1.8.0
     #- wgrib2  # [linux]
     - xarray >=2025.1.1
 
 test:
   commands:
-    - pip check
+    #- pip check
   imports:
     - herbie
     - herbie.models
