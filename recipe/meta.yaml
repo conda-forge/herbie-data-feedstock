@@ -1,5 +1,5 @@
 {% set name = "herbie-data" %}
-{% set version = "2026.1.0" %}
+{% set version = "2026.1.1" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 96ab0e2325dc43234f7425777fe8af960ac54d8bec4acc8ffbb7fafd13691181
+  sha256: 3a389a337747e285ee0e36f9ae5fa4ce5672b9ef7e5ffd816d5d230eafcb1259
 
 build:
   number: 0
@@ -42,7 +42,7 @@ requirements:
 
 test:
   commands:
-    #- pip check
+    #- pip check # diable since eccodeslibs requirement isn't on conda-forge
   imports:
     - herbie
     - herbie.models
