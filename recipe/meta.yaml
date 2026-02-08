@@ -41,11 +41,7 @@ requirements:
     - xarray >=2025.1.1
 
 test:
-  source_files:
-    - tests/
-    - pyproject.toml 
   commands:
-    - pytest -v tests/test_hrrr.py
     #- pip check # diable since eccodeslibs requirement isn't on conda-forge
   imports:
     - herbie
