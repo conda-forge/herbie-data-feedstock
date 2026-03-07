@@ -1,5 +1,5 @@
 {% set name = "herbie-data" %}
-{% set version = "2026.1.1" %}
+{% set version = "2026.3.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 3a389a337747e285ee0e36f9ae5fa4ce5672b9ef7e5ffd816d5d230eafcb1259
+  sha256: 092d6e521c529c3d40ab039950bae104c70e7eb2eda0c16afde8799247df3184
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
     - python {{ python_min }}
     - hatchling
     - hatch-vcs
-    
+
   run:
     - cartopy >=0.25.0
     - cfgrib >=0.9.15.1
