@@ -1,5 +1,5 @@
 {% set name = "herbie-data" %}
-{% set version = "2026.9.2" %}
+{% set version = "2026.10.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 59cad8f9d388e2683925308a3ac9c6a8ba910a98ef44977aca529021434c430d
+  sha256: 06b5d7f8c65e2ab98165a36d0c85d47901f46da4d7a4250f72fbd4f407593d3a
 
 build:
   number: 0
